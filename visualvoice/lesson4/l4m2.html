@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Divs Example</title>
+    <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
+    <style>
+        body {
+            align-items: center;
+        }
+        .container {
+            display: flex;
+            align-items: center;    
+        }
+        .box {
+            position: relative;
+            width: 1000px;
+            height: 400px;
+            border: solid black 3px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: .2s;
+        }
+        .next:hover,.box:hover,.previous:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        .next{
+            transition: .2s;
+            position: relative;
+            float: right;
+            width: 100px;
+            height: 50px;
+            border-radius: 50px;
+            font-family: 'Bubblegum Sans';
+            font-size: 20px;
+            text-align: left;
+        }
+        .box,.next,.previous{
+            top: 50px;
+        }
+        .dis{
+            position: relative;
+            top: 100px;
+            font-family: 'Bubblegum Sans';
+        }
+        .previous{
+            transition: .2s;
+            position: relative;
+            float: left;
+            width: 100px;
+            height: 50px;
+            border-radius: 50px;
+            font-family: 'Bubblegum Sans';
+            font-size: 20px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="box">
+            <div class="dis">
+                <h2>Vegetables</h2>
+                <p>Use both hands to mimic picking vegetables from a garden.</p>
+            </div>
+        </button>
+        <button class="box">
+            <div class="dis">
+                <h2>Beer</h2>
+                <p>Hold your hand in a cup shape and tilt it toward your mouth.</p>
+            </div>
+        </button>
+        <button class="box">
+            <div class="dis">
+                <h2>Soda</h2>
+                <p>Mimic opening a can and then taking a sip.</p>
+            </div>
+        </button>
+        <button class="box">
+            <div class="dis">
+                <h2>Wine</h2>
+                <p>Mimic holding a wine glass and tilting it slightly.</p>
+            </div>
+        </button>
+
+    </div>
+    <button class="next">Next</button>
+    <button class="previous">Previous</button>
+</body>
+</html>

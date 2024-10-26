@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Divs Example</title>
+    <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
+    <style>
+        body {
+            align-items: center;
+            font-family: 'Bubblegum Sans';
+        }
+        .container {
+            display: flex;
+            align-items: center;    
+        }
+        .box {
+            position: relative;
+            width: 1000px;
+            height: 400px;
+            border: solid black 3px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: .2s;
+        }
+        .next:hover,.box:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        .next{
+            transition: .2s;
+            position: relative;
+            float: right;
+            width: 100px;
+            height: 50px;
+            border-radius: 50px;
+            font-family: 'Bubblegum Sans';
+            font-size: 20px;
+            text-align: left;
+        }
+        .box,.next{
+            top: 50px;
+        }
+        .dis{
+            position: relative;
+            top: 100px;
+            font-family: 'Bubblegum Sans';
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="box">
+            <div class="dis">
+                <h2>Pneumonia</h2>
+                <p>Place one hand on your chest and the other on your back to indicate lung issues.</p>
+            </div>
+        </button>
+        <button class="box">
+            <div class="dis">
+                <h2>Migraine</h2>
+                <p>Use both hands to press on your temples and then make a wavy motion to indicate throbbing pain.</p>
+            </div>
+        </button>
+        <button class="box">
+            <div class="dis">
+                <h2>Infection</h2>
+                <p>Use a pointing gesture to indicate where the infection is located (e.g., throat, ear) and then make a sweeping motion.</p>
+            </div>
+        </button>
+        <button class="box">
+            <div class="dis">
+                <h2>Hypertension</h2>
+                <p>Use both hands to indicate pressure by pushing outward with your palms.</p>
+            </div>
+        </button>
+    </div>
+    <button class="next">Next</button>
+</body>
+</html>

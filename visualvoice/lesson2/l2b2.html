@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Divs Example</title>
+    <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
+    <style>
+        body {
+            align-items: center;
+        }
+        .container {
+            display: flex;
+            align-items: center;    
+        }
+        .box {
+            position: relative;
+            width: 1000px;
+            height: 400px;
+            border: solid black 3px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: .2s;
+        }
+        .quiz:hover,.box:hover,.previous:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        .quiz{
+            transition: .2s;
+            position: relative;
+            float: right;
+            width: 100px;
+            height: 50px;
+            border-radius: 50px;
+            font-family: 'Bubblegum Sans';
+            font-size: 20px;
+            text-align: left;
+        }
+        .box,.quiz,.previous{
+            top: 50px;
+        }
+        .dis{
+            position: relative;
+            top: 100px;
+            font-family: 'Bubblegum Sans';
+        }
+        .previous{
+            transition: .2s;
+            position: relative;
+            float: left;
+            width: 100px;
+            height: 50px;
+            border-radius: 50px;
+            font-family: 'Bubblegum Sans';
+            font-size: 20px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="box">
+        <div class="dis">
+        <h2>Horse</h2>
+        <p>Use your hand to mimic a horse’s mane by sweeping your fingers down from the top of your head.</p>
+            </div>
+        </button>
+        <button class="box">
+        <div class="dis">
+        <h2>Rabbit</h2>
+        <p>Place both hands in front of your mouth and wiggle your fingers to represent bunny ears.</p>
+            </div>
+        </button>
+        <button class="box">
+        <div class="dis">
+        <h2>Pet</h2>
+        <p>Pat your own leg or make a petting motion with one hand to indicate affection.</p>
+            </div>
+        </button>
+    
+    
+
+
+    </div>
+    <button class="quiz">Quiz</button>
+    <button class="previous">Previous</button>
+</body>
+</html>
