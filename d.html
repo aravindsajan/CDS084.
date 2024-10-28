@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipping Grid</title>
+    <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url(../visualvoice/gbg.jpg);
+        }
+        .Container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 250px;
+            height: 60vh;
+            width: 1100px;
+            margin-right: 100px;
+            margin-bottom: 100px;
+        }
+        .card {
+            position: relative;
+            perspective: 1000px; 
+        }
+        .flipper {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d; 
+        }
+        .card:hover .flipper {
+            transform: rotateY(180deg); 
+        }
+        .front, .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden; 
+            border: 2px solid black;
+            border-radius: 25px;
+            padding: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            font-family: 'Bubblegum Sans';
+            font-style: oblique;
+            backdrop-filter: blur(10px);fill: ;
+            background-image: linear-gradient(to right, rgb(198, 206, 213), rgb(89, 152, 177));
+        }
+        .back {
+            transform: rotateY(180deg); 
+            background-color: rgb(253, 254, 254);
+            background-image: url(Screenshot\ 2024-10-23\ 222633.png);
+            color: darkslategrey;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <div class="card">
+            <div class="flipper">
+                <div class="front">
+                    <div>S</div>
+                </div>
+                <div class="back"><img src="/visualvoice/lesson main2/imgs/S.jpg" alt="" style="border-radius: 25px;">
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="flipper">
+                <div class="front">T</div>
+                <div class="back"><img src="/visualvoice/lesson main2/imgs/T.jpg" alt="" style="border-radius: 25px;"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="flipper">
+                <div class="front">U</div>
+                <div class="back"><img src="/visualvoice/lesson main2/imgs/U.jpg" alt="" style="border-radius: 25px;"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="flipper">
+                <div class="front">V</div>
+                <div class="back"><img src="/visualvoice/lesson main2/imgs/V.jpg" alt="" style="border-radius: 25px;"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="flipper">
+                <div class="front">W</div>
+                <div class="back"><img src="/visualvoice/lesson main2/imgs/W.jpg" alt="" style="border-radius: 25px;"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="flipper">
+                <div class="front">X</div>
+                <div class="back"><img src="/visualvoice/lesson main2/imgs/X.jpg" alt="" style="border-radius: 25px;"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="flipper">
+                <div class="front">Y</div>
+                <div class="back"><img src="/visualvoice/lesson main2/imgs/Y.jpg" alt="" style="border-radius: 25px;"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="flipper">
+                <div class="front">Z</div>
+                <div class="back"><img src="/visualvoice/lesson main2/imgs/Z.jpg" alt="" style="border-radius: 25px;"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

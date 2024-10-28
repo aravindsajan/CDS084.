@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flippable Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .flippable {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            perspective: 1000px; /* Give some depth */
+        }
+
+        .front, .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden; /* Hide the back side when flipped */
+            transition: transform 0.6s; /* Smooth flip transition */
+        }
+
+        .front {
+            background-color: lightblue;
+        }
+
+        .back {
+            background-color: lightcoral;
+            transform: rotateY(180deg); /* Start rotated for the back side */
+        }
+
+        /* Flip the card when hovered */
+        .flippable:hover .front {
+            transform: rotateY(180deg);
+        }
+
+        .flippable:hover .back {
+            transform: rotateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="flippable">
+        <div class="front">Front Side</div>
+        <div class="back">Back Side</div>
+    </div>
+</body>
+</html>
